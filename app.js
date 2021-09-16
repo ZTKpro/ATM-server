@@ -14,11 +14,11 @@ app.use(
     schema: buildSchema(`
 
     type Event {
-        _id: ID!
-        title: String!
-        description: String!
-        price: Float!
-        date: String!
+      _id: ID!
+      title: String!
+      description: String!
+      price: Float!
+      date: String!
     }
 
     input EventInput {
@@ -29,17 +29,17 @@ app.use(
     }
 
     type RootQuery {
-        events: [String!]!
+      events: [String!]!
     }   
     
     type RootMutation {
-        createEvent(eventInput: EventInput): Event
+      createEvent(eventInput: EventInput): Event
     }
     
     schema {
-            query: RootQuery
-            mutation: RootMutation
-        }
+        query: RootQuery
+        mutation: RootMutation
+      }
     `),
     rootValue: {
       events: () => {
