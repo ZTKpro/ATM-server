@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+# mongoDB env
+nodemon.json
+
 # testing
 /coverage
 
